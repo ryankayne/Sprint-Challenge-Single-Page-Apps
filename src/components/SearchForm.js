@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import CharacterCard from "./CharacterCard";
 
 export default function SearchForm(props) {
 
@@ -20,11 +21,13 @@ const [searchResults, setSearchResults] = useState([]);
 // }, []);
 
 useEffect(() => {
-  // console.log(props.data);
-  const results = searchResults.filter(character => 
-    character.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-    setSearchResults(results);
+  const output = props.character.filter(character => {
+  // const results = searchResults.filter(character => {
+    return character.name.toLowerCase().includes(searchTerm.toLowerCase());
+  
+    // character.name.toLowerCase().includes(searchTerm.toLowerCase())
+  });
+    setSearchResults(output);
 }, [searchTerm]);
 
 const handleChange = e => {
@@ -44,10 +47,11 @@ const handleChange = e => {
           onChange={handleChange}
         />     
         </form>
+        
         <div className="results-list">
           <ul>
             {searchResults.map(character =>  (
-              <li key={character}>{character}</li>
+              <CharacterCard name={character.name} image={character.image} gender={character.gender} species={character.species}/>
             ))}
           </ul>
         </div>

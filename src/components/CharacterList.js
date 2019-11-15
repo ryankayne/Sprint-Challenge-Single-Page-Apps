@@ -24,13 +24,13 @@ export default function CharacterList() {
   return (
     
     <div className="character-list">
-      <SearchForm data={char} />
       {char.map(char => {
 
         return (
           <CharacterCard
             key={char.id}
             name={char.name}
+            image={char.image} alt="character photo"
             gender={char.gender}
             species={char.species}
             />
