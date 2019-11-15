@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client Side routing is beneficial because it allows a user to navigate a site without constantly requesting new data with each event. Client side is definitely helpful when filling out forms so every time you submit, you're not clearing the whole form if something went wrong. Also, it frees up a lot of bandwidth to only load stuff once, instead of having to reload multiple times.
 
 ## Project Set Up
 
