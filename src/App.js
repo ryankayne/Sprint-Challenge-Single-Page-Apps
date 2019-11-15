@@ -1,8 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import styled from "styled-components";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList";
 import WelcomePage from "./components/WelcomePage.js";
+
+
 
 export default function App() {
   return (
@@ -16,11 +19,7 @@ export default function App() {
           <Route exact path="/" component={WelcomePage} />
           <Route exact path="/character-list" component={CharacterList} />
         </div>
-        </nav>
-    
-      
-      
-      
+        </nav>           
     </main>
   );
 }
