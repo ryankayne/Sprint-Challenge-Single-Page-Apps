@@ -21,9 +21,9 @@ const [searchResults, setSearchResults] = useState([]);
 
 useEffect(() => {
   // console.log(props.data);
-  const results = searchResults.filter(character => {
-    return character.name.toLowerCase().includes(searchTerm.toLowerCase())
-  });
+  const results = searchResults.filter(character => 
+    character.toLowerCase().includes(searchTerm.toLowerCase())
+  );
     setSearchResults(results);
 }, [searchTerm]);
 
